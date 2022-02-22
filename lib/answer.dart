@@ -10,13 +10,20 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      child: RaisedButton(
-        color: Colors.blue,
-        textColor: Colors.white,
-        child: Text(answerText),
-        onPressed: selectHandler,
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Container(
+        width: double.infinity,
+        child: RaisedButton(
+          elevation: 10,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6),
+          ),
+          color: Colors.blue,
+          textColor: Colors.white,
+          child: Text(answerText),
+          onPressed: selectHandler,
+        ),
       ),
     );
   }
